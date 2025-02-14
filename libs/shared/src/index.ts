@@ -3,3 +3,5 @@ export * from './lib/layouts/main-layout/main-layout.component';
 export * from './lib/interfaces/category.interface';
 export * from './lib/models/category.model';
 export * from './lib/consts/environment';
+export * from './lib/interfaces/user.interface';
+export * from './lib/models/user.model';

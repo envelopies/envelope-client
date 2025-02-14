@@ -11,4 +11,16 @@
       <lib-product-category-list/>
     </div>
   </section>
+  <section class="popular-sellers">
+    <h2 class="section-title">
+      Популярные продавцы
+    </h2>
+    <div class="popular-sellers__list">
+      @for (seller of sellers; track seller.id) {
+        <div class="seller-card">
+          {{ seller.username }}
+        </div>
+      }
+    </div>
+  </section>
 </main>
