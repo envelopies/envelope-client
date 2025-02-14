@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -23,9 +24,4 @@ body {
 
 .p-carousel-item-list {
   padding: 20px 0;
-}
-
-.section-title {
-  font-size: 32px;
-  margin-bottom: 30px;
 }

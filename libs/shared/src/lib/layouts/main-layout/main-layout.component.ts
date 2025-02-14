@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HeaderComponent, IUser } from '@store/shared';
-import { HeroComponent } from '../../UI/hero/hero.component';
+import {
+  FooterComponent,
+  HeaderComponent,
+  HeroComponent,
+  IUser,
+} from '@store/shared';
 import { CategoryListComponent } from '@store/product';
 
 @Component({
@@ -9,7 +13,12 @@ import { CategoryListComponent } from '@store/product';
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [HeaderComponent, HeroComponent, CategoryListComponent],
+  imports: [
+    HeaderComponent,
+    HeroComponent,
+    CategoryListComponent,
+    FooterComponent,
+  ],
 })
 export class MainLayoutComponent {
   public sellers: IUser[] = [

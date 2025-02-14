@@ -1,26 +1,29 @@
-<main class="main container">
+<main class="main">
   <lib-shared-header/>
-  <section class="hero">
-    <lib-shared-hero/>
-  </section>
-  <section class="categories">
-    <h2 class="section-title">
-      Категории
-    </h2>
-    <div class="categories__list">
-      <lib-product-category-list/>
-    </div>
-  </section>
-  <section class="popular-sellers">
-    <h2 class="section-title">
-      Популярные продавцы
-    </h2>
-    <div class="popular-sellers__list">
-      @for (seller of sellers; track seller.id) {
-        <div class="seller-card">
-          {{ seller.username }}
-        </div>
-      }
-    </div>
-  </section>
+  <div class="container">
+    <section class="hero section">
+      <lib-shared-hero/>
+    </section>
+    <section class="categories section">
+      <h2 class="section-title">
+        Категории
+      </h2>
+      <div class="categories__list">
+        <lib-product-category-list/>
+      </div>
+    </section>
+    <section class="popular-sellers section">
+      <h2 class="section-title">
+        Популярные продавцы
+      </h2>
+      <div class="popular-sellers__list">
+        @for (seller of sellers; track seller.id) {
+          <div class="seller-card">
+            {{ seller.username }}
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+  <lib-shared-footer/>
 </main>
