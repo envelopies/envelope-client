@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@store/product": ["libs/product/src/index.ts"],
       "@store/shared": ["libs/shared/src/index.ts"]
     }
   },
