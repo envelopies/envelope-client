@@ -1,0 +1,13 @@
+<div class="card">
+  <p-carousel
+    [value]="(categories$ | async) || []"
+    [numVisible]="3"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions"
+    [circular]="false"
+  >
+    <ng-template let-category pTemplate="item">
+      <lib-product-category-card [category]="category" />
+    </ng-template>
+  </p-carousel>
+</div>

@@ -1,0 +1,22 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  margin: .5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &__img {
+    width: 60px;
+    height: 60px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 17px 0 rgba(34, 60, 80, 0.2);
+    transform: translateY(-5px);
+  }
+}
