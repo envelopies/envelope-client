@@ -7,5 +7,6 @@ module.exports = {
   },
   rules: {
     'i18n/no-russian-character': 'off',
+    '@angular-eslint/template/elements-content': 'off',
   },
 };

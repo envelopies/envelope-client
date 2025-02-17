@@ -12,6 +12,14 @@
         <lib-product-category-list/>
       </div>
     </section>
+    <section class="popular-products section">
+      <h2 class="section-title">
+        Подборка товаров
+      </h2>
+      <div class="popular-products__list">
+        <lib-product-list [products]="(products$ | async) || []"/>
+      </div>
+    </section>
     <section class="popular-sellers section">
       <h2 class="section-title">
         Популярные продавцы

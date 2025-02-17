@@ -7,3 +7,5 @@ export * from './lib/models/category.model';
 export * from './lib/consts/environment';
 export * from './lib/interfaces/user.interface';
 export * from './lib/models/user.model';
+export * from './lib/interfaces/product.interface';
+export * from './lib/models/product.model';

@@ -3,6 +3,14 @@
     img {
       width: 125px;
       height: 100px;
+      max-width: initial;
+    }
+
+    @media (max-width: 580px) {
+      flex-basis: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -10,14 +18,47 @@
     display: flex;
     align-items: center;
     gap: 70px;
+
+    @media (max-width: 700px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 580px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
   }
 
   &__search {
     width: 100%;
+
+    @media (max-width: 580px) {
+      flex-basis: 62%;
+    }
 
     input {
       width: 100%;
       border-radius: 32px;
     }
   }
+
+  &__button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000000;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    color: #ffffff;
+
+    @media (max-width: 580px) {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+}
+
+.p-button-label {
+  font-size: 12px !important;
 }

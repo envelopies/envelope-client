@@ -23,8 +23,26 @@
 .section-title {
   font-size: 32px;
   margin-bottom: 30px;
+
+  @media (max-width: 580px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 400px) {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .section {
   margin-bottom: 50px;
+}
+
+.popular-products {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }

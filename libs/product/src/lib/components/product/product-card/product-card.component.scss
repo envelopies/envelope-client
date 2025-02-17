@@ -1,0 +1,9 @@
+:host {
+  width: 100%;
+}
+
+.product {
+  &__image {
+    height: 230px;
+  }
+}

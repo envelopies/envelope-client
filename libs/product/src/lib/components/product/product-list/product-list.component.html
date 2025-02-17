@@ -1,0 +1,11 @@
+<p-data-view #dv layout="grid" [value]="products">
+  <ng-template #grid let-products>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
+      @for (product of products; track product.id) {
+        <div class="flex justify-center w-full">
+          <lib-product-card [product]="product"/>
+        </div>
+      }
+    </div>
+  </ng-template>
+</p-data-view>

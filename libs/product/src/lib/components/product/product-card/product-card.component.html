@@ -1,0 +1,20 @@
+<p-card class="w-full max-w-[375px] product" [style]="{ overflow: 'hidden', alignItems: 'center' }">
+  <ng-template #header>
+    <img alt="Card" class="product__image" [src]="product.photoUrl" />
+  </ng-template>
+  <ng-template #title>
+    {{ product.title }}
+  </ng-template>
+  <p class="text-center">
+    <strong>{{ product.price }}₽</strong>
+  </p>
+  <ng-template #footer>
+    <button
+      pButton
+      severity="contrast"
+      icon="pi pi-shopping-cart"
+      label="Купить"
+      class="flex-auto whitespace-nowrap w-full"
+    ></button>
+  </ng-template>
+</p-card>

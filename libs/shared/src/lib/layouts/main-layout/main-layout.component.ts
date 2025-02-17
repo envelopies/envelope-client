@@ -1,11 +1,23 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import {
   FooterComponent,
   HeaderComponent,
   HeroComponent,
   IUser,
+  ProductModel,
 } from '@store/shared';
-import { CategoryListComponent } from '@store/product';
+import { CategoryListComponent, ProductService } from '@store/product';
+import { Observable } from 'rxjs';
+import { Card } from 'primeng/card';
+import { Button } from 'primeng/button';
+import { AsyncPipe, NgForOf } from '@angular/common';
+import { DataView } from 'primeng/dataview';
+import { ProductListComponent } from '../../../../../product/src/lib/components/product/product-list/product-list.component';
 
 @Component({
   standalone: true,
@@ -18,9 +30,19 @@ import { CategoryListComponent } from '@store/product';
     HeroComponent,
     CategoryListComponent,
     FooterComponent,
+    Card,
+    Button,
+    AsyncPipe,
+    DataView,
+    NgForOf,
+    ProductListComponent,
   ],
 })
-export class MainLayoutComponent {
+export class MainLayoutComponent implements OnInit {
+  private readonly productService: ProductService = inject(ProductService);
+
+  public products$!: Observable<ProductModel[]>;
+
   public sellers: IUser[] = [
     {
       id: 0,
@@ -53,4 +75,8 @@ export class MainLayoutComponent {
       roles: [],
     },
   ];
+
+  public ngOnInit(): void {
+    this.products$ = this.productService.getPopularProducts();
+  }
 }
